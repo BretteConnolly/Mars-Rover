@@ -24,7 +24,7 @@ void initMarsMap (Sample map[10][20], int rowCount, int colCount);
 
 void printMarsMap(Sample map[10][20], int rowCount, int colCount, Rover *roverPtr); 
 
-void moveRover(Sample map[10][20], int rowCount, int colCount, Rover *roverPtr, char direction); 
+void moveRover( Sample map[10][20], int rowCount, int colCount, Rover *roverPtr, char direction ); 
 
 void testMe(Sample map[10][20], int rowCount, int  colCount, Rover *roverPtr); 
 
