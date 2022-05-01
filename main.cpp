@@ -95,10 +95,7 @@ void moveRover(Sample map[10][20], int rowCount, int colCount, Rover *roverPtr, 
       return; // we failed to move
     }
     else if (map[roverPtr->currentRow][roverPtr->currentCol].hasWater)
-    {
       roverPtr->currentCol++; 
-      roverPtr->waterUnits++;
-    }
     else
     {
       map[roverPtr->currentRow][roverPtr->currentCol].hasRoverTracks = true; 
@@ -118,10 +115,7 @@ void moveRover(Sample map[10][20], int rowCount, int colCount, Rover *roverPtr, 
       return; 
     }
    else if (map[roverPtr->currentRow][roverPtr->currentCol].hasWater)
-    {
       roverPtr->currentCol--; 
-      roverPtr->waterUnits++;
-    }
     else
     {
       map[roverPtr->currentRow][roverPtr->currentCol].hasRoverTracks = true; 
@@ -141,10 +135,7 @@ void moveRover(Sample map[10][20], int rowCount, int colCount, Rover *roverPtr, 
       return; 
     }
     else if (map[roverPtr->currentRow][roverPtr->currentCol].hasWater)
-    {
       roverPtr->currentRow--;
-      roverPtr->waterUnits++;
-    }
     else
     {
       map[roverPtr->currentRow][roverPtr->currentCol].hasRoverTracks = true; 
@@ -164,14 +155,13 @@ void moveRover(Sample map[10][20], int rowCount, int colCount, Rover *roverPtr, 
       return; 
     }
     else if (map[roverPtr->currentRow][roverPtr->currentCol].hasWater)
-    {
       roverPtr->currentRow++; 
-      roverPtr->waterUnits++;
-    }
     else
       map[roverPtr->currentRow][roverPtr->currentCol].hasRoverTracks = true; 
       roverPtr->currentRow++; 
   }
+  if (map[roverPtr->currentRow][roverPtr->currentCol].hasWater)
+    roverPtr->waterUnits++;
 } 
 
 void printMarsMap(Sample map[10][20], int rowCount, int colCount, Rover * roverPtr)
