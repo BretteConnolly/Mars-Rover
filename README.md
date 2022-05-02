@@ -35,3 +35,18 @@ Further applications -- added complexity for gaming:
 -- Health points, weapons, treasure, and other prizes that can be picked up, in addition to units of water
 -- More varied classes besides rovers as character types, and function to move these different characters
 -- A tiebreaker function when one character tries to occupy an element that another character already occupies
+![Mars Rover](https://user-images.githubusercontent.com/79230918/166171414-4c921a50-e339-45ae-9618-a3efe17e513f.jpg)
+
+
+![Mars Rover 2](https://user-images.githubusercontent.com/79230918/166171423-1a4acf5f-e2c4-4ddf-b4e8-423c7f9dde2e.jpg)
+
+![Mars Rover 3](https://user-images.githubusercontent.com/79230918/166171430-d40ff9c0-3a4a-40c3-bdb2-7d1e92b415f0.jpg)
+![Mars Rover 4](https://user-images.githubusercontent.com/79230918/166171440-7fbb805e-71aa-4635-801d-96d658d977a0.jpg)
+![Mars Rover 5](https://user-images.githubusercontent.com/79230918/166171448-bad9be92-3120-4525-9a9a-c233dbd920a2.jpg)
+
+![Mars Rover 6](https://user-images.githubusercontent.com/79230918/166171462-5a0269a0-c6fe-4515-adef-ec6e9b6d1cb2.jpg)
+
+
+
+
+
