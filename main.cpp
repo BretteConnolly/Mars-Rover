@@ -45,9 +45,9 @@ int main()
     cout << endl << "Current location: " << myRover.currentRow << ", " << myRover.currentCol << endl;
     
     cout << "Please enter a direction for the rover (r, l, u, d, x) "; 
-    cin >> userResponse; 
+    cin >> userResponse; // Collect the rover direction from the user
 
-    if (userResponse == 'x') 
+    if (userResponse == 'x') // Break out of the loop if the user response is 'x'
     { 
       cout << "Goodbye from Mars! " << endl;
         break;
@@ -98,16 +98,17 @@ void moveRover(Sample map[10][20], int rowCount, int colCount, Rover *roverPtr, 
       roverPtr->currentCol++; 
     else
     {
+      // leave tracks at the Rover's current row, column location 
       map[roverPtr->currentRow][roverPtr->currentCol].hasRoverTracks = true; 
-      roverPtr->currentCol++;
+      roverPtr->currentCol++; // Update the rover position by incrementing the current column
     }
-  } 
+  }
   else if (direction == 'l') 
   {
     if (roverPtr->currentCol == 0) 
     {
       cout << "moveRover(): cannot move left because that would be off the map. Please try again" << endl;
-      return; 
+      return; // We failed to move
     }
     else if (map[roverPtr->currentRow][roverPtr->currentCol - 1].isBlocked) 
     {
@@ -115,9 +116,10 @@ void moveRover(Sample map[10][20], int rowCount, int colCount, Rover *roverPtr, 
       return; 
     }
    else if (map[roverPtr->currentRow][roverPtr->currentCol].hasWater)
-      roverPtr->currentCol--; 
+      roverPtr->currentCol--; // Update the rover position by decrementing the current column
     else
     {
+      // Leave tracks at the rover's current row, column location
       map[roverPtr->currentRow][roverPtr->currentCol].hasRoverTracks = true; 
       roverPtr->currentCol--; 
     }
@@ -127,7 +129,7 @@ void moveRover(Sample map[10][20], int rowCount, int colCount, Rover *roverPtr, 
     if (roverPtr->currentRow == 0) 
     {
       cout << "moveRover(): cannot move up because that would be off the map. Please try again" << endl;
-      return; 
+      return; // We failed to move
     }
     else if (map[roverPtr->currentRow - 1][roverPtr->currentCol].isBlocked) 
     {
@@ -135,10 +137,11 @@ void moveRover(Sample map[10][20], int rowCount, int colCount, Rover *roverPtr, 
       return; 
     }
     else if (map[roverPtr->currentRow][roverPtr->currentCol].hasWater)
-      roverPtr->currentRow--;
+      roverPtr->currentRow--; // Update the rover position by decrementing the current row
     else
     {
-      map[roverPtr->currentRow][roverPtr->currentCol].hasRoverTracks = true; 
+      map[roverPtr->currentRow][roverPtr->currentCol].hasRoverTracks = true;
+      // Leave tracks at the rover's current row, column location
       roverPtr->currentRow--;
     }
   }
@@ -147,7 +150,7 @@ void moveRover(Sample map[10][20], int rowCount, int colCount, Rover *roverPtr, 
     if (roverPtr->currentRow == rowCount - 1) 
     {
       cout << "moveRover(): cannot move down because that would be off the map. Please try again" << endl;
-      return; 
+      return; // We failed to move
     }
     else if (map[roverPtr->currentRow + 1][roverPtr->currentCol].isBlocked) 
     {
@@ -155,13 +158,14 @@ void moveRover(Sample map[10][20], int rowCount, int colCount, Rover *roverPtr, 
       return; 
     }
     else if (map[roverPtr->currentRow][roverPtr->currentCol].hasWater)
-      roverPtr->currentRow++; 
+      roverPtr->currentRow++; // Update the rover's location by incrementing its row
     else
       map[roverPtr->currentRow][roverPtr->currentCol].hasRoverTracks = true; 
+    // Leave tracks where the rover has been 
       roverPtr->currentRow++; 
   }
   if (map[roverPtr->currentRow][roverPtr->currentCol].hasWater)
-    roverPtr->waterUnits++;
+    roverPtr->waterUnits++; // Collect water if the rover is on a body of water
 } 
 
 void printMarsMap(Sample map[10][20], int rowCount, int colCount, Rover * roverPtr)
