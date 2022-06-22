@@ -25,7 +25,7 @@ whether the address holds a body of water or an obstacle, and whether the rover 
 -- Rover collects one unit of water at each body of water
 -- Increments row and column dimensions of rover's current location to allow rover to move
 -- Preserves rover's path by leaving tracks on the non-water elements on which the rover has traversed 
--- Rover can move an unlimited times, until the user input of 'x' indicates that the user wants to quit the program
+-- Rover can move an unlimited number of times, until the user input of 'x' indicates that the user wants to quit the program
 -- Testing function to test: the initialize map function, the print map function, user direction input, and the rover movement function
 -- Stores the output in a text file 
 
